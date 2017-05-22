@@ -15,26 +15,20 @@ import com.wsj.kk.autobbs.fragment.MessageFragment;
 import com.wsj.kk.autobbs.fragment.MineFragment;
 
 public class MainActivity extends FragmentActivity {
-    /**
-     * FragmentTabhost
-     */
+
     private FragmentTabHost mTabHost;
 
-    /**
-     * 布局填充器
-     *
-     */
     private LayoutInflater mLayoutInflater;
+
+
 
     /**
      * Fragment数组界面
-     *
      */
     private Class mFragmentArray[] = { HomeFragment.class, CoverFragment.class,
             CoverFragment.class, MessageFragment.class, MineFragment.class };
     /**
      * 存放图片数组
-     *
      */
     private int mImageArray[] = { R.drawable.home_tab,
             R.drawable.cover_tab, R.drawable.icon_publish,
@@ -55,7 +49,6 @@ public class MainActivity extends FragmentActivity {
     private void initView() {
         mLayoutInflater = LayoutInflater.from(this);
 
-        // 找到TabHost
         mTabHost = (FragmentTabHost) findViewById(android.R.id.tabhost);
         mTabHost.setup(this, getSupportFragmentManager(), R.id.realtabcontent);
         mTabHost.getTabWidget().setDividerDrawable(null); // 去掉分割线
@@ -74,7 +67,6 @@ public class MainActivity extends FragmentActivity {
     }
 
     /**
-     *
      * 给每个Tab按钮设置图标和文字
      */
     private View getTabItemView(int index) {

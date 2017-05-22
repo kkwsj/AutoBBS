@@ -7,7 +7,7 @@ android {
     aaptOptions.useNewCruncher = false
     defaultConfig {
         applicationId "com.wsj.kk.autobbs"
-        minSdkVersion 15
+        minSdkVersion 16
         targetSdkVersion 25
         versionCode 1
         versionName "1.0"
@@ -31,4 +31,13 @@ dependencies {
     compile 'com.android.support:support-v4:25.3.1'
     compile 'com.android.support:design:25.3.1'
     testCompile 'junit:junit:4.12'
+
+    compile project(':jcvideoplayer-lib')
+    compile 'com.squareup.picasso:picasso:2.5.1'
+
+    debugCompile 'com.squareup.leakcanary:leakcanary-android:1.4-beta2'
+    releaseCompile 'com.squareup.leakcanary:leakcanary-android-no-op:1.4-beta2'
+    testCompile 'com.squareup.leakcanary:leakcanary-android-no-op:1.4-beta2'
+
+
 }

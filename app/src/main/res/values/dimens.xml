@@ -1,3 +1,5 @@
 <resources>
     <dimen name="fab_margin">16dp</dimen>
+    <dimen name="jc_start_button_w_h_normal">40dp</dimen>
+    <dimen name="jc_start_button_w_h_fullscreen">55dp</dimen>
 </resources>
