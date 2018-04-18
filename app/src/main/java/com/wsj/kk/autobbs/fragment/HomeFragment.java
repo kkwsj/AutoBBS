@@ -12,12 +12,15 @@ import android.widget.Toast;
 
 import com.wsj.kk.autobbs.R;
 import com.wsj.kk.autobbs.activity.ConcreteContentActivity;
+import com.wsj.kk.autobbs.activity.SampleGridViewActivity;
+import com.wsj.kk.autobbs.activity.SampleListDetailActivity;
 
 /**
  * A simple {@link Fragment} subclass.
  */
 public class HomeFragment extends Fragment {
     Button contentButton;
+    Button pictureButton;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -31,6 +34,15 @@ public class HomeFragment extends Fragment {
                 startActivity(intent);
             }
         });
+
+//        pictureButton = (Button) view.findViewById(R.id.id_test_picture);
+//        pictureButton.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Intent intent = new Intent(getActivity(),SampleListDetailActivity.class);
+//                startActivity(intent);
+//            }
+//        });
 
         return view;
 

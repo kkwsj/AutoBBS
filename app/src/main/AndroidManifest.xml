@@ -6,6 +6,13 @@
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
 
+    <!-- Used to adjust the work load depending on the type of network the device is using. -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <!-- Used to load images from the gallery content provider. -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <!-- Used to load images for contact photos. -->
+    <uses-permission android:name="android.permission.READ_CONTACTS"/>
+
     <application
         android:allowBackup="true"
         android:icon="@drawable/app_icon"
@@ -26,6 +33,20 @@
             android:theme="@style/NoActionBarTheme"
             android:configChanges="orientation|screenSize|keyboardHidden"
             android:screenOrientation="portrait"></activity>
+
+
+        <activity android:name=".activity.SampleGridViewActivity"/>
+        <activity android:name=".activity.SampleContactsActivity"/>
+        <activity android:name=".activity.SampleGalleryActivity"/>
+        <activity android:name=".activity.SampleListDetailActivity"/>
+
+        <receiver android:name=".util.SampleWidgetProvider">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE"/>
+            </intent-filter>
+            <meta-data android:name="android.appwidget.provider"
+                android:resource="@xml/sample_widget_info"/>
+        </receiver>
     </application>
 
 </manifest>
